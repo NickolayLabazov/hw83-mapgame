@@ -4,7 +4,7 @@ test('Установка пользовательских настроек се�
   const expected = {
     set: { theme: ['dark', 'light', 'gray'], music: ['trance', 'pop', 'rock', 'chillout', 'off'], difficulty: ['easy', 'normal', 'hard', 'nightmare'] },
     default: new Map([['theme', 'dark'], ['music', 'trance'], ['difficulty', 'easy']]),
-    userSet: new Map([['theme', 'light'], ['music', 'chillout'], ['difficulty', 'hard']]),
+    _setings: new Map([['theme', 'light'], ['music', 'chillout'], ['difficulty', 'hard']]),
   };
   const settings = new Settings();
   settings.setings = ['theme', 'light'];
@@ -30,7 +30,7 @@ test('Попытка неправильной установки пользов�
   const expected = {
     set: { theme: ['dark', 'light', 'gray'], music: ['trance', 'pop', 'rock', 'chillout', 'off'], difficulty: ['easy', 'normal', 'hard', 'nightmare'] },
     default: new Map([['theme', 'dark'], ['music', 'trance'], ['difficulty', 'easy']]),
-    userSet: new Map([['theme', 'dark'], ['music', 'trance'], ['difficulty', 'easy']]),
+    _setings: new Map([['theme', 'dark'], ['music', 'trance'], ['difficulty', 'easy']]),
   };
   const settings = new Settings();
   settings.setings = ['difficulty1', 'hard'];
@@ -44,7 +44,7 @@ test('Попытка неправильной установки пользов�
   const expected = {
     set: { theme: ['dark', 'light', 'gray'], music: ['trance', 'pop', 'rock', 'chillout', 'off'], difficulty: ['easy', 'normal', 'hard', 'nightmare'] },
     default: new Map([['theme', 'dark'], ['music', 'trance'], ['difficulty', 'easy']]),
-    userSet: new Map([['theme', 'dark'], ['music', 'trance'], ['difficulty', 'easy']]),
+    _setings: new Map([['theme', 'dark'], ['music', 'trance'], ['difficulty', 'easy']]),
   };
   const settings = new Settings();
   settings.setings = ['difficulty', 'hard1'];
